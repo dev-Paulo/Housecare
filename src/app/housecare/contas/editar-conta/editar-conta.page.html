@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/housecare/tabs/contas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar {{conta.titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="form">
+        <ion-grid>          
+          <ion-row>
+            <ion-col size-sm="6" offset-sm="3">
+              <ion-item>
+                <ion-label position="floating">Nome</ion-label>
+                <ion-input type="text" autocomplete autocorrect formControlName="nome"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size-sm="6" offset-sm="3">
+              <ion-item>
+                <ion-label position="floating" >Valor</ion-label>
+                <ion-input type="number" formControlName="valor"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>       
+          <ion-row>
+            <ion-col size-sm="6" offset-sm="3">              
+              <ion-button color="primary" (click)="onEditConta()">Editar conta</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+</ion-content>

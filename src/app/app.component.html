@@ -1,0 +1,20 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" (click)="openSideMenu()">
+    <ion-header>
+      <ion-toolbar color="primary">        
+        <ion-title>Housecare</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle menu="first">
+          <ion-item *ngFor="let item of menuItens" lines="none" [routerLink]="item.route">
+            <ion-icon [name]="item.icon" slot="start"></ion-icon>
+            <ion-label>{{item.name}}</ion-label>
+          </ion-item>          
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

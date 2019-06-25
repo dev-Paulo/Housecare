@@ -1,0 +1,7 @@
+{
+  "name": "Housecare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
